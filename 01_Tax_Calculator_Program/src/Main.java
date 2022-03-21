@@ -6,13 +6,12 @@ public class Main {
         double amount;
         System.out.print("Enter the fee amount: ");
         amount = input.nextDouble();
-        System.out.print("Enter the tax rate: ");
-        double taxRate = input.nextDouble();
-        double taxAmount = amount * taxRate;
+
+        double taxAmount = amount < 1000 ? amount*0.18 : amount*0.08;
+
         double amountIncludingTax = amount + taxAmount;
         System.out.println("Amount Excludes Tax: " + amount);
-        System.out.println("Tax Rate: " + taxRate);
-        System.out.println("Tax Amount: " + taxAmount);
         System.out.println("Amount Including Tax: " + amountIncludingTax);
+        System.out.println("Tax Amount: " + taxAmount);
     }
 }
