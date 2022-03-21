@@ -24,8 +24,9 @@ public class Main {
         music = input.nextInt();
 
         int total = (math + physics + chemistry + turkish + history + music);
-        double result = total / 6.0;
-        System.out.println("Your average grade: " + result);
-
+        double average = total / 6.0;
+        System.out.println("Your average grade: " + average);
+        String result = average >= 60 ? "You pass the class" : "You are failed";
+        System.out.println(result);
     }
-}
+}    
